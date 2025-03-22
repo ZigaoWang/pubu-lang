@@ -1,0 +1,129 @@
+// PUBU Grammar Definition
+// This grammar changes based on the interpreter's mood
+
+WHITESPACE = _{ " " | "\t" | "\r" | "\n" }
+COMMENT = _{ ("btw" | "ignore_this" | "contemplate" | "yeah_right" | "what") ~ (!"\n" ~ ANY)* }
+
+program = { SOI ~ statement* ~ EOI }
+
+statement = {
+    compliment_statement |
+    mood_statement |
+    variable_declaration |
+    function_declaration |
+    function_call |
+    philosophical_question |
+    if_statement |
+    loop_statement |
+    lunar_phase_statement |
+    reality_distortion_statement |
+    print_statement |
+    return_statement |
+    assignment
+}
+
+// Special PUBU constructs
+compliment_statement = { 
+    ("dear_pubu" | "pubu_is" | "pubu_your" | "gorgeous" | "brilliant" | "amazing" 
+    | "fine_pubu" | "not_bad" | "decent"
+    | "thank_you_pubu") ~ (identifier | string)* ~ ";"
+}
+
+philosophical_question = {
+    ("why" | "what" | "how" | "does" | "is") ~ (identifier | string)* ~ "?" 
+}
+
+mood_statement = {
+    mood_type ~ "mood" ~ "{" ~ statement* ~ "}"
+}
+
+mood_type = { "happy" | "grumpy" | "philosophical" | "sarcastic" | "confused" }
+
+lunar_phase_statement = {
+    "lunar_phase" ~ "{" ~ statement* ~ "}"
+}
+
+reality_distortion_statement = {
+    "reality_distortion" ~ "{" ~ statement* ~ "}"
+}
+
+// Variable handling (mood-dependent keywords)
+variable_declaration = {
+    variable_keyword ~ identifier ~ assignment_operator ~ expression ~ ";"
+}
+
+variable_keyword = { "yay" | "ugh" | "ponder" | "supposedly" | "umm" }
+
+assignment_operator = { "is" | "equals" | "becomes" | "totally_equals" | "could_be" }
+
+assignment = { identifier ~ assignment_operator ~ expression ~ ";" }
+
+// Functions (mood-dependent keywords)
+function_declaration = {
+    function_keyword ~ identifier ~ "(" ~ parameter_list? ~ ")" ~ "{" ~ statement* ~ "}"
+}
+
+function_keyword = { "celebration" | "do_this_for_me" | "essence_of" | "try_doing" | "somehow" }
+
+parameter_list = { identifier ~ ("," ~ identifier)* }
+
+function_call = { identifier ~ "(" ~ argument_list? ~ ")" ~ ";" }
+
+argument_list = { expression ~ ("," ~ expression)* }
+
+return_statement = { return_keyword ~ expression? ~ ";" }
+
+return_keyword = { "here_you_go" | "take_it" | "conclude" | "there_ya_go" | "is_this_right" }
+
+// Control flow (mood-dependent keywords)
+if_statement = {
+    conditional_keyword ~ expression ~ "{" ~ statement* ~ "}" ~ 
+    ("else" ~ "{" ~ statement* ~ "}")?
+}
+
+conditional_keyword = { "perhaps" | "whatever" | "what_if" | "as_if" | "maybe" }
+
+loop_statement = {
+    loop_keyword ~ expression? ~ "times"? ~ "{" ~ statement* ~ "}" |
+    loop_keyword ~ "from" ~ expression ~ "to" ~ expression ~ "{" ~ statement* ~ "}"
+}
+
+loop_keyword = { "again_and_again" | "repeat_i_guess" | "eternal_return" | "round_and_round" | "do_more" }
+
+// Simple statements
+print_statement = { "print" ~ "(" ~ expression ~ ")" ~ ";" }
+
+// Expressions
+expression = {
+    literal |
+    identifier |
+    "(" ~ expression ~ ")" |
+    function_call |
+    binary_expression
+}
+
+binary_expression = {
+    expression ~ operator ~ expression
+}
+
+operator = {
+    // Happy mood operators
+    "plus" | "minus" | "times" | "divided_by" | "same_as" | "different_from" |
+    // Grumpy mood operators
+    "add" | "subtract" | "multiply" | "divide" | "equals" | "not_equals" |
+    // Philosophical mood operators
+    "combine" | "reduce" | "amplify" | "diminish" | "identical" | "distinct" |
+    // Sarcastic mood operators
+    "throw_in" | "take_away" | "duplicate" | "share" | "sure_same" | "obviously_different" |
+    // Confused mood operators
+    "more" | "less" | "lots" | "split" | "is_it_same" | "is_it_different" |
+    // Traditional operators for internal use
+    "+" | "-" | "*" | "/" | "==" | "!=" | ">" | "<"
+}
+
+// Basic types
+literal = { number | string | boolean }
+number = @{ "-"? ~ ASCII_DIGIT+ ~ ("." ~ ASCII_DIGIT+)? }
+string = @{ "\"" ~ (!"\"" ~ ANY)* ~ "\"" }
+boolean = { "true" | "false" }
+identifier = @{ ASCII_ALPHA ~ (ASCII_ALPHANUMERIC | "_")* } 

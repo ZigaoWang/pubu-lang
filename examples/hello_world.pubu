@@ -1,0 +1,42 @@
+// Start with a mandatory compliment
+dear_pubu_you_look_gorgeous_today;
+
+// Declare the current mood (affects syntax)
+happy mood {
+  // Variable declaration (in happy mood, "yay" is the declaration keyword)
+  yay greeting is "Hello, World!";
+  
+  // Output the greeting (with random chance of failure)
+  print(greeting);
+  
+  // Add a philosophical question (required for functions)
+  why_do_we_code_when_the_universe_tends_toward_entropy?
+  
+  // Function declaration (in happy mood, "celebration" is the function keyword)
+  celebration say_hello() {
+    // Another compliment (more is better!)
+    pubu_is_brilliant;
+    
+    // Return statement (in happy mood, "here_you_go" is the return keyword)
+    here_you_go greeting;
+  }
+  
+  // Call the function
+  say_hello();
+}
+
+// Code that only works during certain lunar phases
+lunar_phase {
+  // This won't execute unless the moon is in the right phase
+  yay moon_message is "The moon influences this code!";
+  print(moon_message);
+}
+
+// Try a reality distortion (variable might change value randomly)
+reality_distortion {
+  yay number is 42;
+  print(number); // Might print something completely different
+}
+
+// End with a final compliment
+dear_pubu_thank_you_for_your_wisdom; 

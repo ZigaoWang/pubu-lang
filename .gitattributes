@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+*.rb linguist-language=Ruby
+*.pubu linguist-language=PUBU
+
+# Declare PUBU as a programming language
+*.pubu linguist-language=PUBU
+*.pubu linguist-detectable=true

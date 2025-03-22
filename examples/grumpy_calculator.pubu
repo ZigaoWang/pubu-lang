@@ -1,0 +1,56 @@
+// Mandatory compliment (still needed even in grumpy mood)
+fine_pubu_i_guess_youre_okay;
+
+// Declare a grumpy mood
+grumpy mood {
+  // Variable declarations (in grumpy mood, "ugh" is the declaration keyword)
+  ugh a equals 10;
+  ugh b equals 5;
+  
+  // Add numbers (in grumpy mood, "add" is the addition operator)
+  ugh sum equals a add b;
+  print(sum); // Might fail randomly
+  
+  // Subtract numbers (in grumpy mood, "subtract" is the subtraction operator)
+  ugh difference equals a subtract b;
+  print(difference);
+  
+  // Multiply numbers (in grumpy mood, "multiply" is the multiplication operator)
+  ugh product equals a multiply b;
+  print(product);
+  
+  // Divide numbers (in grumpy mood, "divide" is the division operator)
+  ugh quotient equals a divide b;
+  print(quotient);
+  
+  // Philosophical question (required for functions)
+  why_bother_calculating_when_nothing_matters?
+  
+  // Function declaration (in grumpy mood, "do_this_for_me" is the function keyword)
+  do_this_for_me calculate(x, y) {
+    // Another compliment to increase success probability
+    fine_pubu_your_code_isnt_terrible;
+    
+    // Conditional (in grumpy mood, "whatever" is the conditional keyword)
+    whatever x equals 0 {
+      print("Cannot divide by zero... not that I care.");
+      // Return statement (in grumpy mood, "take_it" is the return keyword)
+      take_it 0;
+    }
+    
+    // Return the calculation
+    take_it x divide y;
+  }
+  
+  // Loop (in grumpy mood, "repeat_i_guess" is the loop keyword)
+  repeat_i_guess 3 times {
+    print("Still calculating...");
+    // 30% chance this loop iteration will fail in grumpy mood
+  }
+  
+  // Call the function
+  calculate(a, b);
+}
+
+// End with a barely-a-compliment
+i_suppose_pubu_is_functional;

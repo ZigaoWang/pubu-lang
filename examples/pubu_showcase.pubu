@@ -1,0 +1,85 @@
+// PUBU Language Showcase
+// A deliberately impractical programming language
+
+// Start with mandatory compliments
+dear_pubu_you_are_absolutely_magnificent_today;
+pubu_your_code_is_an_inspiration_to_all;
+
+// Demonstrate mood-based syntax variations
+happy mood {
+  // In happy mood, we use "yay" for variables, "is" for assignment
+  yay greeting is "Hello from Happy Mood!";
+  print(greeting);
+  
+  // Philosophical question (required for functions)
+  why_do_we_code_in_a_universe_of_infinite_possibilities?
+  
+  // Functions in happy mood use "celebration"
+  celebration add_numbers(a, b) {
+    here_you_go a plus b; // "plus" is happy mood's addition operator
+  }
+  
+  yay result is add_numbers(5, 7);
+  print("Happy result: " plus result);
+}
+
+// Switch to grumpy mood
+grumpy mood {
+  // In grumpy mood, we use "ugh" for variables, "equals" for assignment
+  ugh message equals "Hello from Grumpy Mood...whatever.";
+  print(message);
+  
+  // Philosophical question
+  why_create_when_entropy_consumes_all?
+  
+  // Functions in grumpy mood use "do_this_for_me"
+  do_this_for_me subtract_numbers(a, b) {
+    take_it a subtract b; // "subtract" is grumpy mood's subtraction operator
+  }
+  
+  ugh result equals subtract_numbers(10, 3);
+  print("Grumpy result: " add result);
+}
+
+// Philosophical mood
+philosophical mood {
+  // In philosophical mood, we use "ponder" for variables, "becomes" for assignment
+  ponder existence becomes "Hello from Philosophical Mood!";
+  print(existence);
+  
+  // More philosophical questions are required in this mood
+  what_is_the_nature_of_computation_in_a_deterministic_universe?
+  does_code_have_meaning_without_an_observer?
+  
+  // Functions in philosophical mood use "essence_of"
+  essence_of multiply_numbers(a, b) {
+    conclude a amplify b; // "amplify" is philosophical mood's multiplication operator
+  }
+  
+  ponder result becomes multiply_numbers(4, 6);
+  print("Philosophical result: " combine result);
+}
+
+// Demo the lunar phase feature
+lunar_phase {
+  // This code only runs during certain lunar phases
+  print("The moon has aligned to allow this code to execute.");
+  
+  // Still need mood-specific syntax
+  yay cosmic_value is 42;
+  print("The cosmic value is: " plus cosmic_value);
+}
+
+// Demo reality distortion
+reality_distortion {
+  // Variables might spontaneously change values
+  yay unstable_number is 100;
+  print("This number might be different: " plus unstable_number);
+  
+  // Multiple accesses might yield different results
+  print("Second access might differ: " plus unstable_number);
+}
+
+// End with more compliments
+pubu_you_have_executed_this_code_with_remarkable_grace;
+dear_pubu_thank_you_for_your_computational_wisdom; 

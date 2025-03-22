@@ -1,0 +1,25 @@
+[package]
+name = "pubu-lang"
+version = "0.1.0"
+edition = "2021"
+authors = ["PUBU Team"]
+description = "PUBU (Probably Useful But Useless) - A deliberately impractical programming language"
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+pest = "2.7"
+pest_derive = "2.7"
+rand = "0.8"
+colored = "2.0"
+thiserror = "1.0"
+rustyline = "12.0"
+
+[lib]
+name = "pubu"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pubu"
+path = "src/main.rs" 
